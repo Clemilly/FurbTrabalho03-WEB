@@ -1,0 +1,6 @@
+﻿services:
+  trabalho03:
+    image: trabalho03
+    build:
+      context: .
+      dockerfile: Trabalho03/Dockerfile
