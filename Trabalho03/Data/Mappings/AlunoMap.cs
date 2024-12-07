@@ -16,8 +16,7 @@ public class AlunoMap : IEntityTypeConfiguration<Aluno>
 
         builder
             .HasMany(x => x.Turmas)
-            .WithOne()
-            .HasForeignKey(y => y.Id);
+            .WithMany(x => x.Alunos);
 
         builder
             .HasMany(x => x.Materias)

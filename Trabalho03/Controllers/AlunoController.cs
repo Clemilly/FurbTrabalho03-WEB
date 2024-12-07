@@ -1,17 +1,17 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Trabalho03.Models.Requests;
 using Trabalho03.Models.Responses;
-using Trabalho03.Services;
 using Trabalho03.Services.Interfaces;
 using Trabalho03.Views;
 
 namespace Trabalho03.Controllers;
 
 [ApiController]
-[Route("Aluno")]
+[Authorize]
 public class AlunoController(IAlunoService alunoService) : ControllerBase
 {
-    [HttpPost, Route("/Criar")]
+    [HttpPost, Route("/CriarAluno")]
     public async Task<IActionResult> CriarAluno([FromBody] CriarAlunoRequest criarAlunoRequest)
     {
         try
@@ -30,7 +30,7 @@ public class AlunoController(IAlunoService alunoService) : ControllerBase
         }
     }
 
-    [HttpGet, Route("/Consultar")]
+    [HttpGet, Route("/ConsultarAlunos")]
     public async Task<IActionResult> ObterAluno()
     {
         try
@@ -44,7 +44,7 @@ public class AlunoController(IAlunoService alunoService) : ControllerBase
         }
     }
     
-    [HttpGet, Route("/Consultar/{email}")]
+    [HttpGet, Route("/Consultar/Aluno/{email}")]
     public async Task<IActionResult> ObterAluno([FromRoute] string email)
     {
         try
@@ -64,7 +64,7 @@ public class AlunoController(IAlunoService alunoService) : ControllerBase
         }
     }
 
-    [HttpPatch, Route("/Atualizar/{id:guid}")]
+    [HttpPatch, Route("/Atualizar/Aluno/{id:guid}")]
     public async Task<IActionResult> AtualizarAluno([FromRoute] Guid id, [FromBody] CriarAlunoRequest criarAlunoRequest)
     {
         try
@@ -96,7 +96,7 @@ public class AlunoController(IAlunoService alunoService) : ControllerBase
 
     //TODO: Criar endpoint para atribuir turma ao aluno
     
-    [HttpDelete, Route("/Delete/{id:guid}")]
+    [HttpDelete, Route("/Deletar/Aluno/{id:guid}")]
     public async Task<IActionResult> ExcluirAluno([FromRoute] Guid id)
     {
         try

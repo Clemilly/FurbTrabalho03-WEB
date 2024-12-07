@@ -11,6 +11,5 @@ public class MateriaMap: IEntityTypeConfiguration<Materia>
         builder.ToTable("Materia");
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Nome).HasColumnName("Nome").IsRequired();
-        builder.Property(x => x.AlunoId).HasColumnName("AlunoId").IsRequired();
     }
 }

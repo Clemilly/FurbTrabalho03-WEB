@@ -11,5 +11,9 @@ public class TurmaMap : IEntityTypeConfiguration<Turma>
         builder.ToTable("Turma");
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Nome).HasColumnName("Nome").IsRequired();
+        
+        builder
+            .HasMany(x => x.Alunos)
+            .WithMany(x => x.Turmas);
     }
 }

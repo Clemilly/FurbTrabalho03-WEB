@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "/Users/clemilly/Documents/Trabalho03 20.45.41/Trabalho03/Trabalho03.csproj": {}
+    "C:\\Users\\tomel\\Desktop\\TrabalhoClaudia\\FurbTrabalho03-WEB\\Trabalho03\\Trabalho03.csproj": {}
   },
   "projects": {
-    "/Users/clemilly/Documents/Trabalho03 20.45.41/Trabalho03/Trabalho03.csproj": {
+    "C:\\Users\\tomel\\Desktop\\TrabalhoClaudia\\FurbTrabalho03-WEB\\Trabalho03\\Trabalho03.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/clemilly/Documents/Trabalho03 20.45.41/Trabalho03/Trabalho03.csproj",
+        "projectUniqueName": "C:\\Users\\tomel\\Desktop\\TrabalhoClaudia\\FurbTrabalho03-WEB\\Trabalho03\\Trabalho03.csproj",
         "projectName": "Trabalho03",
-        "projectPath": "/Users/clemilly/Documents/Trabalho03 20.45.41/Trabalho03/Trabalho03.csproj",
-        "packagesPath": "/Users/clemilly/.nuget/packages/",
-        "outputPath": "/Users/clemilly/Documents/Trabalho03 20.45.41/Trabalho03/obj/",
+        "projectPath": "C:\\Users\\tomel\\Desktop\\TrabalhoClaudia\\FurbTrabalho03-WEB\\Trabalho03\\Trabalho03.csproj",
+        "packagesPath": "C:\\Users\\tomel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tomel\\Desktop\\TrabalhoClaudia\\FurbTrabalho03-WEB\\Trabalho03\\obj\\",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "/Users/clemilly/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\tomel\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[2.0.5, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -64,7 +68,11 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.6.2, )"
+              "version": "[7.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.3.0, )"
             }
           },
           "imports": [
@@ -86,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -7,6 +7,7 @@ public record Materia
     public Guid Id { get; init; }
     public string Nome { get; set; }
     public Guid AlunoId { get; set; }
+    
     [JsonIgnore]
     public virtual Aluno Aluno { get; set; }
 }

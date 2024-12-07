@@ -17,6 +17,21 @@ namespace Trabalho03.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
 
+            modelBuilder.Entity("AlunoTurma", b =>
+                {
+                    b.Property<Guid>("AlunosId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("TurmasId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("AlunosId", "TurmasId");
+
+                    b.HasIndex("TurmasId");
+
+                    b.ToTable("AlunoTurma");
+                });
+
             modelBuilder.Entity("Trabalho03.Models.Entities.Aluno", b =>
                 {
                     b.Property<Guid>("Id")
@@ -94,6 +109,7 @@ namespace Trabalho03.Migrations
             modelBuilder.Entity("Trabalho03.Models.Entities.Turma", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Nome")
@@ -104,6 +120,21 @@ namespace Trabalho03.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Turma", (string)null);
+                });
+
+            modelBuilder.Entity("AlunoTurma", b =>
+                {
+                    b.HasOne("Trabalho03.Models.Entities.Aluno", null)
+                        .WithMany()
+                        .HasForeignKey("AlunosId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Trabalho03.Models.Entities.Turma", null)
+                        .WithMany()
+                        .HasForeignKey("TurmasId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Trabalho03.Models.Entities.Materia", b =>
@@ -136,20 +167,9 @@ namespace Trabalho03.Migrations
                     b.Navigation("Materia");
                 });
 
-            modelBuilder.Entity("Trabalho03.Models.Entities.Turma", b =>
-                {
-                    b.HasOne("Trabalho03.Models.Entities.Aluno", null)
-                        .WithMany("Turma")
-                        .HasForeignKey("Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Trabalho03.Models.Entities.Aluno", b =>
                 {
                     b.Navigation("Materias");
-
-                    b.Navigation("Turma");
                 });
 #pragma warning restore 612, 618
         }

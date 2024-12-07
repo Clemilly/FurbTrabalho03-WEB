@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Text.Json.Serialization;
-using Trabalho03.Data.Mappings;
-
 namespace Trabalho03.Models.Entities;
 
 public class Aluno
