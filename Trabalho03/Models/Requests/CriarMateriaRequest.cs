@@ -2,6 +2,5 @@
 
 public class CriarMateriaRequest
 {
-    public Guid Id { get; init; }
     public string Nome { get; set; }
 }

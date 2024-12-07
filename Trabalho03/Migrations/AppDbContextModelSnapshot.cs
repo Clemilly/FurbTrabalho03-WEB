@@ -15,7 +15,7 @@ namespace Trabalho03.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
+            modelBuilder.HasAnnotation("ProductVersion", "8.0.11");
 
             modelBuilder.Entity("AlunoTurma", b =>
                 {
@@ -63,9 +63,8 @@ namespace Trabalho03.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("AlunoId")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("AlunoId");
+                    b.Property<Guid?>("AlunoId")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -139,13 +138,9 @@ namespace Trabalho03.Migrations
 
             modelBuilder.Entity("Trabalho03.Models.Entities.Materia", b =>
                 {
-                    b.HasOne("Trabalho03.Models.Entities.Aluno", "Aluno")
+                    b.HasOne("Trabalho03.Models.Entities.Aluno", null)
                         .WithMany("Materias")
-                        .HasForeignKey("AlunoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Aluno");
+                        .HasForeignKey("AlunoId");
                 });
 
             modelBuilder.Entity("Trabalho03.Models.Entities.Nota", b =>

@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tomel\\Desktop\\TrabalhoClaudia\\FurbTrabalho03-WEB\\Trabalho03\\Trabalho03.csproj": {}
+    "/Users/clemilly/Documents/FURB/FURB 202402/WEB/FurbTrabalho03-WEB/Trabalho03/Trabalho03.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tomel\\Desktop\\TrabalhoClaudia\\FurbTrabalho03-WEB\\Trabalho03\\Trabalho03.csproj": {
+    "/Users/clemilly/Documents/FURB/FURB 202402/WEB/FurbTrabalho03-WEB/Trabalho03/Trabalho03.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomel\\Desktop\\TrabalhoClaudia\\FurbTrabalho03-WEB\\Trabalho03\\Trabalho03.csproj",
+        "projectUniqueName": "/Users/clemilly/Documents/FURB/FURB 202402/WEB/FurbTrabalho03-WEB/Trabalho03/Trabalho03.csproj",
         "projectName": "Trabalho03",
-        "projectPath": "C:\\Users\\tomel\\Desktop\\TrabalhoClaudia\\FurbTrabalho03-WEB\\Trabalho03\\Trabalho03.csproj",
-        "packagesPath": "C:\\Users\\tomel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomel\\Desktop\\TrabalhoClaudia\\FurbTrabalho03-WEB\\Trabalho03\\obj\\",
+        "projectPath": "/Users/clemilly/Documents/FURB/FURB 202402/WEB/FurbTrabalho03-WEB/Trabalho03/Trabalho03.csproj",
+        "packagesPath": "/Users/clemilly/.nuget/packages/",
+        "outputPath": "/Users/clemilly/Documents/FURB/FURB 202402/WEB/FurbTrabalho03-WEB/Trabalho03/obj/",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "C:\\Users\\tomel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/clemilly/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -54,17 +54,23 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqLite": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -94,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

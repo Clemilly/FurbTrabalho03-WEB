@@ -20,8 +20,7 @@ public class AlunoMap : IEntityTypeConfiguration<Aluno>
 
         builder
             .HasMany(x => x.Materias)
-            .WithOne(x => x.Aluno)
-            .HasForeignKey(y => y.AlunoId)
+            .WithOne()
             .HasPrincipalKey(x => x.Id);
     }
 }

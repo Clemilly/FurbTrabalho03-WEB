@@ -17,7 +17,7 @@ public class TurmaService(AppDbContext _context) : ITurmaService
 
     public async Task<Turma[]> ObterTodasTurmasAsync()
     {
-        return await _context.Turmas.Where(x => true).ToArrayAsync();
+        return await _context.Turmas.Include(x => x.Alunos).Where(x => true).ToArrayAsync();
     }
 
     public async Task<Turma[]> ConsultarPorNomeAsync(string nome)
